@@ -13,7 +13,7 @@ interface ProductDisplayProps {
 }
 
 export default function ProductDisplay({ initialProducts }: ProductDisplayProps) {
-  const [products, setProducts] = useState<Product[]>(initialProducts);
+  const [products] = useState<Product[]>(initialProducts);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   useEffect(() => {
