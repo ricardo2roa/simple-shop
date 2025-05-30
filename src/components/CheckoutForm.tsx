@@ -81,9 +81,10 @@ export interface CartItem extends Product {
             setPreferenceId(data.id)
             console.log('respuesta: '+data.id)
             setIsOrderPlaced(true);
+            localStorage.removeItem('simpleCart');
         }
     })
-    //localStorage.removeItem('simpleCart');
+    //
     
     /*setTimeout(() => {
       router.push('/');
