@@ -2,7 +2,7 @@
 'use client'; // Necesario para usar hooks como useSearchParams y useState/useEffect
 
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function CheckoutStatusPage() {
@@ -43,19 +43,21 @@ export default function CheckoutStatusPage() {
     }
     // ... (resto del JSX igual que en el ejemplo del pages router) ...
     return (
-        <div style={{ textAlign: 'center', padding: '50px', color: isSuccess ? 'green' : 'red' }}>
-            <h1>Resultado del Pago</h1>
-            <p>{message}</p>
-            {isSuccess && (
-                 <div>
-                    <p>Recibirás una confirmación por correo electrónico pronto.</p>
+        <Suspense>
+            <div style={{ textAlign: 'center', padding: '50px', color: isSuccess ? 'green' : 'red' }}>
+                <h1>Resultado del Pago</h1>
+                <p>{message}</p>
+                {isSuccess && (
+                    <div>
+                        <p>Recibirás una confirmación por correo electrónico pronto.</p>
+                    </div>
+                )}
+                <div style={{ marginTop: '30px' }}>
+                    <Link href="/">
+                        Volver a la página principal
+                    </Link>
                 </div>
-            )}
-            <div style={{ marginTop: '30px' }}>
-                <Link href="/">
-                    Volver a la página principal
-                </Link>
             </div>
-        </div>
+        </Suspense>
     );
 }
