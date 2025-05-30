@@ -1,0 +1,70 @@
+/* src/styles/Home.module.css */
+.container {
+    padding: 0 1rem; /* Ajustado para no duplicar el padding de main en globals.css */
+  }
+  
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0; /* Espacio vertical dentro del contenido principal */
+  }
+  
+  @media (min-width: 768px) {
+    .mainContent {
+      flex-direction: row;
+    }
+  }
+  
+  .productsGrid {
+    flex: 3; /* Ocupa más espacio disponible */
+  }
+  
+  .productsGrid h2 {
+    font-size: 1.8rem;
+    margin-top: 0; /* Eliminar margen superior si el título ya tiene espaciado */
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .cartSection {
+    flex: 1; /* Ocupa menos espacio, se ajustará al contenido */
+    min-width: 280px; /* Ancho mínimo para el carrito */
+    padding: 1.5rem; /* Más padding interno para el carrito */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra más sutil */
+    align-self: flex-start; /* Para que no se estire verticalmente si la lista de productos es larga */
+    position: sticky; /* Hace que el carrito se quede fijo al hacer scroll */
+    top: 20px; /* Espacio desde la parte superior al hacer scroll */
+  }
+  
+  .checkoutButton {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.5rem; /* Padding más generoso */
+    margin-top: 1.5rem; /* Más espacio arriba del botón */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem; /* Tamaño de fuente ligeramente mayor */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  }
+  
+  .checkoutButton:hover {
+    background-color: #218838;
+  }
+  
+  .checkoutButton:active {
+    transform: scale(0.98);
+  }

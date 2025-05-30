@@ -1,0 +1,71 @@
+/* src/styles/ProductCard.module.css */
+.card {
+    border: 1px solid #e0e0e0; /* Borde más suave */
+    border-radius: 8px;
+    padding: 1.25rem; /* Padding ligeramente aumentado */
+    background-color: #fff;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para que el botón se alinee abajo si las descripciones varían */
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transform: translateY(-4px); /* Efecto de elevación sutil */
+  }
+  
+  .imageContainer {
+    width: 100%;
+    margin-bottom: 1rem;
+    aspect-ratio: 1 / 1; /* Para mantener imágenes cuadradas, ajusta si es necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Cambiado a cover para llenar el aspect-ratio */
+    border-radius: 4px;
+  }
+  
+  
+  .card h3 {
+    font-size: 1.15rem; /* Ligeramente más grande */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+    min-height: 2.4em; /* Para alinear títulos de varias líneas */
+  }
+  
+  .price {
+    font-size: 1.2rem; /* Precio más prominente */
+    color: #0070f3;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .addButton {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.4rem; /* Padding aumentado */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+  }
+  
+  .addButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .addButton:active {
+    transform: scale(0.98);
+  }

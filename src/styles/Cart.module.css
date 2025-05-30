@@ -1,0 +1,94 @@
+/* src/styles/Cart.module.css */
+.cart {
+    padding: 0; /* El padding ya está en cartSection */
+  }
+  
+  .cart h2 {
+    font-size: 1.6rem; /* Título del carrito más grande */
+    margin-top: 0;
+    margin-bottom: 1.5rem; /* Más espacio debajo del título */
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+  }
+  
+  .cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Altura máxima para el carrito antes de hacer scroll */
+    overflow-y: auto; /* Scroll si hay muchos items */
+  }
+  
+  .cartItem {
+    display: flex;
+    flex-direction: column; /* Para mejor responsividad en espacios pequeños */
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .cartItem:last-child {
+    border-bottom: none;
+  }
+  
+  .cartItem > div:first-child { /* Contenedor de nombre y precio */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para que el precio pase abajo si no cabe */
+    gap: 0.5rem;
+  }
+  
+  .cartItem span:first-child { /* Nombre del producto y cantidad */
+    flex-grow: 1;
+    font-size: 0.95rem;
+  }
+  
+  .itemPrice {
+    font-weight: 500; /* Ligeramente menos bold que el total */
+    color: #555;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  
+  .itemControls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Más espacio entre controles */
+    align-self: flex-end; /* Alinea los controles a la derecha en layout de columna */
+  }
+  
+  .quantityInput {
+    width: 55px; /* Un poco más ancho */
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .removeButton {
+    background-color: #e74c3c; /* Rojo más suave */
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .removeButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .totalPrice {
+    font-size: 1.4rem; /* Total más prominente */
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #0070f3;
+    color: #0070f3;
+  }
