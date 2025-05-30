@@ -63,6 +63,7 @@ export interface CartItem extends Product {
         {
             id: product.id,
             title: product.name, // Hazlo más dinámico
+            picture_url: product.name=='Bateria' ? 'https://simple-shop-5pn8.vercel.app/_next/image?url=%2Fimages%2Fbatery.webp&w=256&q=75' : product.name=='Disco de Frenos' ? 'https://simple-shop-5pn8.vercel.app/_next/image?url=%2Fimages%2Fdisco-de-freno.png&w=256&q=75' : 'https://simple-shop-5pn8.vercel.app/_next/image?url=%2Fimages%2Fpastillas-de-freno.jpg&w=256&q=75',
             description: product.name,
             currency_id: 'COP',
             quantity: product.quantity,
